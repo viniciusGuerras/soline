@@ -8,7 +8,7 @@ function Home() {
     };
 
     return (
-        <div className="min-h-screen w-full text-gray-900 flex items-center justify-center ">
+        <div className="min-h-screen w-full text-gray-900 bg-gray-100  flex items-center justify-center ">
             <div className="max-w-2xl text-center">
                 <motion.h1
                     className="text-4xl md:text-5xl font-bold mb-4"
@@ -30,14 +30,11 @@ function Home() {
                 </motion.p>
                 <motion.button
                     onClick={() => handleClick()}
-                    className="bg-blue-400 border border-blue-500 hover:bg-blue-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition"
+                    className="bg-white text-black border border-zinc-500 hover:bg-zinc-500 font-semibold py-2 px-6 rounded-lg shadow-md "
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}
                     transition={{ delay: 0.2 }}
-                    drag
-                    dragConstraints={{ left: -1, right: 1, top: -1, bottom: 1 }}
-                    whileTap={{ cursor: "grabbing" }}
                 >
                     Veja mais
                 </motion.button>

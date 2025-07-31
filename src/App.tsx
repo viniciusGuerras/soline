@@ -3,6 +3,8 @@ import Home from './pages/Home'
 import { BrowserRouter } from 'react-router'
 import Layout from './layouts/Layout'
 import Main from './pages/Main'
+import Wip from './pages/wip'
+import Marketing from './pages/Marketing'
 
 function App() {
     return (
@@ -11,6 +13,8 @@ function App() {
                 <Route element={<Layout />}>
                     <Route path="/" element={<Home />} />
                     <Route path="/main" element={<Main />} />
+                    <Route path="/wip" element={<Wip />} />
+                    <Route path='/marketing' element={<Marketing />} />
                 </Route>
             </Routes>
         </BrowserRouter>
