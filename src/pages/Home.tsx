@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router'
 import { motion } from "motion/react"
 
-
 function Home() {
     const navigate = useNavigate();
     const handleClick = () => {
@@ -9,16 +8,15 @@ function Home() {
     };
 
     return (
-        <div className="min-h-screen w-full bg-gray-100 text-gray-900 flex items-center justify-center ">
+        <div className="min-h-screen w-full text-gray-900 flex items-center justify-center ">
             <div className="max-w-2xl text-center">
                 <motion.h1
                     className="text-4xl md:text-5xl font-bold mb-4"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}
-
                 >
-                    Hello, I'm Vinícius
+                    Opa, eu sou o Vinícius
                 </motion.h1>
                 <motion.p
                     className="text-lg md:text-xl mb-6"
@@ -27,17 +25,21 @@ function Home() {
                     exit={{ opacity: 0, y: 20 }}
                     transition={{ delay: 0.1 }}
                 >
-                    I'm someone deeply curious about how humans think, make decisions, form ideas, and solve problems. I build software as a way to explore cognition, creativity, and intelligence.
+                    O que me move é a curiosidade de entender o mundo, as pessoas e como tudo funciona.
+                    Aprender é meu jeito de crescer, de me desafiar e de construir algo significativo.
                 </motion.p>
                 <motion.button
                     onClick={() => handleClick()}
-                    className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition"
+                    className="bg-blue-400 border border-blue-500 hover:bg-blue-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}
                     transition={{ delay: 0.2 }}
+                    drag
+                    dragConstraints={{ left: -1, right: 1, top: -1, bottom: 1 }}
+                    whileTap={{ cursor: "grabbing" }}
                 >
-                    See more
+                    Veja mais
                 </motion.button>
             </div>
         </div >
